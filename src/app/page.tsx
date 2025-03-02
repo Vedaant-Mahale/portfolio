@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { Oxanium } from "next/font/google";
+import Image from "next/image";
 
 const inter = Oxanium({
   subsets: ["latin"],
@@ -49,8 +50,42 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Right-Side Panel */}
-      <div className="fixed right-10 top-1/2 transform -translate-y-1/2 w-20 h-1/2 bg-[rgba(50,50,50,0.1)] rounded-full backdrop-blur-[2px] border-1 border-sky-400"></div>
+      <div className="fixed right-10 top-1/2 transform -translate-y-1/2 w-20 h-1/2 bg-[rgba(50,50,50,0.1)] rounded-full backdrop-blur-[2px] border-1 border-sky-400 flex flex-col">
+      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden"><Image
+        src="/profile.png" // Ensure you have an image in the public folder
+        alt="Profile Icon"
+        width={48} 
+        height={48}
+        className="object-cover w-[90%] h-[90%] rounded-full m-auto"
+      /></div>
+      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden">
+      <Image
+        src="/book.png" 
+        alt="book Icon"
+        width={48} 
+        height={48}
+        className="object-cover w-[90%] h-[90%] rounded-full"
+      />
+      </div>
+      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden">
+      <Image
+        src="/trophy.png" 
+        alt="book Icon"
+        width={48} 
+        height={48}
+        className="object-cover w-[90%] h-[90%] rounded-full"
+      />
+      </div>
+      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden">
+      <Image
+        src="/telephone.png" 
+        alt="book Icon"
+        width={48} 
+        height={48}
+        className="object-cover w-[90%] h-[90%] rounded-full"
+      />
+      </div>
+      </div>
     </>
   );
 }
