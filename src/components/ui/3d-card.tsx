@@ -36,17 +36,15 @@ export const CardContainer = ({
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsMouseEntered(true);
-    let x = e.clientX; // I hate ESLint 
-    let y = e.clientY; // I hate ESLint
-    x = y; //i despise ESlint
+    let _x = e.clientX; // I hate ESLint 
+    let _y = e.clientY; // I hate ESLint
     if (!containerRef.current) return;
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
-    let x = e.clientX; // I hate ESLint 
-    let y = e.clientY; // I hate ESLint
-    x = y; //i despise ESlint
+    let _x = e.clientX; // I hate ESLint 
+    let _y = e.clientY; // I hate ESLint
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
