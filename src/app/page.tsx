@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { Orbitron,Inter } from "next/font/google";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 
 const orbi = Orbitron({
