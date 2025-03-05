@@ -6,27 +6,25 @@ const {
 module.exports = {
   theme: {
     extend: {
+      content: {
+        relative: true,
+        transform: (content) => content.replace(/taos:/g, ''),
+        files: ['./src/*.{html,js}'],
+      },
       fontFamily: {
         'sans': ['var(--font-geist-sans)', 'sans-serif'],
         'mono': ['var(--font-geist-mono)', 'monospace'],
         'arsenal': ['var(--font-arsenal-sc)', 'sans-serif'],
       },
       animation: {
-        aurora: "aurora 60s linear infinite",
         gradient: "gradient 3s ease infinite",
+        bgmove: 'bgmove 40s infinite',
       },
       keyframes: {
-        aurora: {
-          from: {
-            backgroundPosition: "50% 50%, 50% 50%",
-          },
-          to: {
-            backgroundPosition: "350% 50%, 350% 50%",
-          },
-          gradient: {
-            "0%": { backgroundPosition: "0% 50%" },
-            "50%": { backgroundPosition: "100% 50%" },
-            "100%": { backgroundPosition: "0% 50%" },
+        keyframes: {        
+          bgmove: {
+             "0%": { backgroundPosition: "0 0" },
+            "100%": { backgroundPosition: "0 100%" }
           },
         },
       },
@@ -44,5 +42,11 @@ module.exports = {
         ":root": newVars,
       });
     },
+    require('taos/plugin')
   ],
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
+  ]
 };
