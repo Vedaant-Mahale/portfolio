@@ -279,7 +279,7 @@
 }
 .timeline {
   width: 40px;
-  height: 110vh;
+  height: 130vh;
   background: repeating-linear-gradient(
       to bottom,
       rgb(0, 177, 255) 0px,
@@ -290,7 +290,7 @@
   clip-path: inset(0px 0px 100% 0px); /* Initially hidden */
   animation: reveal linear forwards;
   animation-timeline: scroll();
-  animation-range: entry 10% cover 50%;
+  animation-range: entry 15% cover 60%;
 }
 
 /* Animation to reveal the line from top to bottom */
