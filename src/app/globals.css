@@ -224,3 +224,81 @@
 		opacity: 1;
 	}
 }
+.flip-box {
+  view-timeline-name: --box-scroll; /* Creates a scroll timeline */
+  view-timeline-axis: block;
+  animation: rotate-on-scroll linear;
+  animation-timeline: --box-scroll;
+  transform-origin: center;
+}
+@keyframes rotate-on-scroll {
+  0% 
+  {
+    transform: translateY(100%);
+  }
+  20% 
+  {
+    transform: translateY(100%);
+  }
+  40% 
+  {
+    transform: translateX(0);
+  }
+  100%
+  {
+    transform: translateX(0);
+  }
+}
+.animated-border 
+{
+  --border-angle: 0deg;
+  border-radius: 12px;
+  animation: border-angle-rotate 4s infinite linear;
+  border: 0.25rem solid transparent;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+  conic-gradient(
+      from var(--border-angle),
+      hsl(201, 100%, 50%) 0deg 25%,
+      black 25% 50%,
+      hsl(201, 100%, 50%) 50% 75%,
+      black 75% 100% 
+    )
+  border-box;
+}
+
+@keyframes border-angle-rotate 
+{
+  from { --border-angle: 0deg; }
+  to { --border-angle: 360deg; }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.timeline {
+  width: 40px;
+  height: 110vh;
+  background: repeating-linear-gradient(
+      to bottom,
+      rgb(0, 177, 255) 0px,
+      rgb(0, 177, 255) 40px,
+      transparent 10px,
+      transparent 60px
+  );
+  clip-path: inset(0px 0px 100% 0px); /* Initially hidden */
+  animation: reveal linear forwards;
+  animation-timeline: scroll();
+  animation-range: entry 10% cover 50%;
+}
+
+/* Animation to reveal the line from top to bottom */
+@keyframes reveal {
+  from {
+      clip-path: inset(0px 0px 100% 0px); /* Initially hidden */
+  }
+  to {
+      clip-path: inset(0px 0px 0px 0px); /* Fully visible */
+  }
+}

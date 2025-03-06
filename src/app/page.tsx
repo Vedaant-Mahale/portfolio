@@ -69,14 +69,82 @@ export default function Home() {
   </div>
 </div>
 <div className="h-[300vh] w-screen bg-[url('/bg.jpg')] bg-opacity-50">
-<div className = "h-[300vh] w-screen bg-[rgba(0,0,0,0.7)]">
+<div className = "h-[300vh] w-screen bg-[rgba(0,0,0,0.7)] ">
   <div className={`m-auto mb-5 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>
     ABOUT ME
   </div>
-    <div className="m-auto mt-20 w-96 h-32 backdrop-blur-[2px] border-[rgba(0,177,255,1)] border rounded-xl text-white flex items-center justify-center shadow-lg">
-      Who Am I?
+  <div className="flex justify-between">
+    <div className = "w-1/2 mt-20">
+      <div className = "flip-box flex ">
+        <div className="w-96 h-52 m-auto p-10 ml-60 text-sky-400 animated-border flex justify-between">
+          <div>
+          <b>NAME:</b> Vedaant Mahale <br></br>
+          <b>AGE:</b> 18 <br></br>
+          <b>HOBBIES:</b> None <br></br>
+          <b>COLLEGE:</b> Sardar Patel <br></br> Institute of Technology 
+          </div>
+          <div className="cursor-pointer hover-grow w-16 h-16 m-auto mt-6 rounded-full bg-sky-400 flex items-center justify-center overflow-hidden"><Image
+            src="/profile.png" 
+            alt="Profile Icon"
+            width={48} 
+            height={48}
+            className="object-cover w-[90%] h-[90%] rounded-full m-auto"
+          />
+          </div>
+        </div>
+      </div>
+      <div className = "flip-box flex mt-40">
+        <div className="w-96 h-52 m-auto p-10 ml-60 text-sky-400 animated-border flex justify-between">
+          <div>
+          <b>NAME:</b> Vedaant Mahale <br></br>
+          <b>AGE:</b> 18 <br></br>
+          <b>HOBBIES:</b> None <br></br>
+          <b>COLLEGE:</b> Sardar Patel <br></br> Institute of Technology 
+          </div>
+          <div className="cursor-pointer hover-grow w-16 h-16 m-auto mt-6 rounded-full bg-sky-400 flex items-center justify-center overflow-hidden"><Image
+            src="/profile.png" 
+            alt="Profile Icon"
+            width={48} 
+            height={48}
+            className="object-cover w-[90%] h-[90%] rounded-full m-auto"
+          />
+          </div>
+        </div>
+      </div>
+  </div>
+  <div className="timeline"></div>
+  <div className = "w-1/2 mt-60">
+    <div className = "flip-box flex">
+      <div className="w-96 h-52 m-auto p-4 mr-60 text-sky-400 animated-border flex justify-center">
+        <div className="cursor-pointer hover-grow w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden m-auto ml-10 mt-6"><Image
+          src="/linkedin.png" 
+          alt="Profile Icon"
+          width={48} 
+          height={48}
+          className="object-cover w-[90%] h-[90%] rounded-full"/>
+        </div>
+        <button className={`w-20 h-12 m-auto bg-sky-400 rounded-full text-black ${orbi.className} font-bold cursor-pointer hover-grow`}>
+          VIEW
+        </button>
+      </div>
     </div>
-  <div className = {`m-auto mb-5 mt-10 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>MY ACHIEVEMENTS</div>
+    <div className = "flip-box flex mt-40">
+    <div className="w-96 h-52 m-auto p-4 mr-60 text-sky-400 animated-border flex justify-center">
+      <div className="cursor-pointer hover-grow w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden m-auto ml-10 mt-6"><Image
+          src="/linkedin.png" 
+          alt="Profile Icon"
+          width={48} 
+          height={48}
+          className="object-cover w-[90%] h-[90%] rounded-full"/>
+      </div>
+      <button className={`w-20 h-12 m-auto bg-sky-400 rounded-full text-black ${orbi.className} font-bold cursor-pointer hover-grow`}>
+          VIEW
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div className = {`m-auto mb-5 mt-40 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>MY ACHIEVEMENTS</div>
   <div className = "flex justify-center ">
   <CardContainer className="inter-var">
       <CardBody className="relative group/card w-auto h-auto border border-[rgba(0,177,255,1)] m-48 mt-0 box">
