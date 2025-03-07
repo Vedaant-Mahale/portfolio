@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { Orbitron,Inter } from "next/font/google";
 import Image from "next/image";
+import Carousel from "../components/ui/carousel";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 
 const orbi = Orbitron({
@@ -13,11 +14,82 @@ const inter = Inter({
   subsets: ["latin"],
   weight: "400",
 });
+const slideData1 = [
+  {
+    title: "Java",
+    button: "Explore Component",
+    src: "/java.png",
+  },
+  {
+    title: "C",
+    button: "Explore Component",
+    src: "/C.webp",
+  },
+  {
+    title: "Python",
+    button: "Explore Component",
+    src: "/python.png",
+  },
+  {
+    title: "C++",
+    button: "Explore Component",
+    src: "/C++.webp",
+  },
+  {
+    title: "Javascript",
+    button: "Explore Component",
+    src: "/javascript.png",
+  },
+  {
+    title: "Golang",
+    button: "Explore Component",
+    src: "/golang.png",
+  },
+];
 
+const slideData2 = [
+  {
+    title: "React",
+    button: "Explore Component",
+    src: "/react.png",
+  },
+  {
+    title: "Next",
+    button: "Explore Component",
+    src: "/next.jpg",
+  },
+  {
+    title: "MySQL",
+    button: "Explore Component",
+    src: "/mysql.png",
+  },
+  {
+    title: "PostgreSQL",
+    button: "Explore Component",
+    src: "/postgres.png",
+  },
+  {
+    title: "MongoDB",
+    button: "Explore Component",
+    src: "/mongo.png",
+  },
+];
 export default function Home() {
   const [animate, setAnimate] = useState(false);
   const [hide, setHide] = useState(false);
   const [animationKey, setAnimationKey] = useState(0); // Forces re-render
+  const scrollTokno = () => {
+    window.scrollTo({ top: 2.6 * window.innerHeight, behavior: "smooth" });
+  };
+  const scrollToach = () => {
+    window.scrollTo({ top: 4.1 * window.innerHeight, behavior: "smooth" });
+  };
+  const scrollToabo = () => {
+    window.scrollTo({ top: 1 * window.innerHeight, behavior: "smooth" });
+  };
+  const scrollTocon = () => {
+    window.scrollTo({ top: 5.7 * window.innerHeight, behavior: "smooth" });
+  };
 
   useEffect(() => {
     const startAnimation = setTimeout(() => {
@@ -68,8 +140,8 @@ export default function Home() {
   </div>
   </div>
 </div>
-<div className="h-[400vh] w-screen bg-[url('/bg.jpg')] bg-opacity-50">
-<div className = "h-[400vh] w-screen bg-[rgba(0,0,0,0.7)] ">
+<div className="h-[600vh] w-screen bg-[url('/bg.jpg')] bg-opacity-50">
+<div className = "h-[600vh] w-screen bg-[rgba(0,0,0,0.7)] ">
   <div className={`m-auto mb-5 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>
     ABOUT ME
   </div>
@@ -154,12 +226,14 @@ export default function Home() {
     </div>
   </div>
 </div>
-<div className = {`m-auto mb-5 mt-40 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>MY TECHSTACKS</div>
-<div className = "flex w-screen h-[50vh]">
-  <div className = "">
-
-  </div>
-</div>
+<div className = {`m-auto mb-5 mt-40 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>MY LANGUAGES</div>
+  <div className="relative overflow-hidden py-20">
+      <Carousel slides={slideData1} />
+    </div>
+    <div className = {`m-auto mb-5 mt-40 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>MY TECHSTACKS</div>
+  <div className="relative overflow-hidden py-20">
+      <Carousel slides={slideData2} />
+    </div>
   <div className = {`m-auto mb-5 mt-40 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>MY ACHIEVEMENTS</div>
   <div className = "flex justify-center ">
   <CardContainer className="inter-var">
@@ -297,17 +371,27 @@ export default function Home() {
       </CardBody>
     </CardContainer>
     </div>
+    <div className = {`m-auto mb-5 mt-40 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>CONTACT ME</div>
+    <div className="w-screen flex flex-col">
+      <input className="mt-10 w-1/3 h-10 p-5 backdrop-blur-xs rounded-full bg-[rgba(10,10,10,0.5)] m-auto text-sky-400 outline-none border border-sky-400"placeholder="Email Address"></input>
+      <input className="mt-10 w-1/3 h-10 p-5 backdrop-blur-xs rounded-full bg-[rgba(10,10,10,0.5)] m-auto text-sky-400 outline-none border border-sky-400"placeholder="Subject"></input>
+      <textarea
+      className="mt-10 w-1/3 h-96 p-5 backdrop-blur-xs rounded-xl bg-[rgba(10,10,10,0.5)] m-auto text-sky-400 outline-none border border-sky-400 text-left align-top resize-none"
+      placeholder="Content"
+      />
+      <button className="mt-10 w-40 h-10 m-auto rounded-full backdrop-blur-xs bg-[rgba(10,10,10,0.5)] border-sky-400 border text-sky-400">Send</button>
+    </div>
     </div>
     </div>
     <div className="fixed right-10 top-1/2 transform -translate-y-1/2 w-20 h-1/2 bg-[rgba(50,50,50,0.1)] rounded-full backdrop-blur-[2px] border-1 border-sky-400 flex flex-col">
-      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden"><Image
+      <button className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden" onClick={scrollToabo}><Image
         src="/profile.png" 
         alt="Profile Icon"
         width={48} 
         height={48}
         className="object-cover w-[90%] h-[90%] rounded-full m-auto"
-      /></div>
-      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden">
+      /></button>
+      <button className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden" onClick={scrollTokno}>
       <Image
         src="/book.png" 
         alt="book Icon"
@@ -315,8 +399,8 @@ export default function Home() {
         height={48}
         className="object-cover w-[90%] h-[90%] rounded-full"
       />
-      </div>
-      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden">
+      </button>
+      <button className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden" onClick={scrollToach}>
       <Image
         src="/trophy.png" 
         alt="book Icon"
@@ -324,8 +408,8 @@ export default function Home() {
         height={48}
         className="object-cover w-[90%] h-[90%] rounded-full"
       />
-      </div>
-      <div className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden">
+      </button>
+      <button className="cursor-pointer hover-grow w-12 h-12 m-auto rounded-full bg-sky-400 flex items-center justify-center overflow-hidden" onClick={scrollTocon}>
       <Image
         src="/telephone.png" 
         alt="book Icon"
@@ -333,7 +417,7 @@ export default function Home() {
         height={48}
         className="object-cover w-[90%] h-[90%] rounded-full"
       />
-      </div>
+      </button>
       </div>
     </> 
   );

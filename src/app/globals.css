@@ -290,7 +290,7 @@
   clip-path: inset(0px 0px 100% 0px); /* Initially hidden */
   animation: reveal linear forwards;
   animation-timeline: scroll();
-  animation-range: entry 15% cover 60%;
+  animation-range: entry 0% cover 40%;
 }
 
 /* Animation to reveal the line from top to bottom */
