@@ -140,8 +140,8 @@ export default function Home() {
   </div>
   </div>
 </div>
-<div className="h-[600vh] w-screen bg-[url('/bg.jpg')] bg-opacity-50">
-<div className = "h-[600vh] w-screen bg-[rgba(0,0,0,0.7)] ">
+<div className="h-[580vh] w-screen bg-[url('/bg.jpg')] bg-opacity-50">
+<div className = "h-[580vh] w-screen bg-[rgba(0,0,0,0.7)] ">
   <div className={`m-auto mb-5 w-1/3 h-20 border backdrop-blur-[2px] border-[rgba(0,177,255,1)] flex items-center justify-center rounded-3xl text-[rgb(0,177,255)] text-3xl ${orbi.className}`}>
     ABOUT ME
   </div>
