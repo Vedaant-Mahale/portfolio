@@ -4,7 +4,6 @@ import { BackgroundBeams } from "../components/ui/background-beams";
 import { Orbitron, Inter } from "next/font/google";
 import Image from "next/image";
 import Carousel from "../components/ui/carousel";
-import { Carouselnew, Card } from "@/components/ui/apple-cards-carousel";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 
 const orbi = Orbitron({
