@@ -244,7 +244,7 @@ export default function Home() {
                   <div>
                     <b>NAME:</b> Vedaant Mahale <br></br>
                     <b>AGE:</b> 18 <br></br>
-                    <b>HOBBIES:</b> None <br></br>
+                    <b>HOBBIES:</b> Chess <br></br>
                     <b>COLLEGE:</b> Sardar Patel <br></br> Institute of Technology
                   </div>
                   <div className="cursor-pointer hover-grow w-16 h-16 m-auto mt-6 rounded-full bg-sky-400 flex items-center justify-center overflow-hidden"><Image
