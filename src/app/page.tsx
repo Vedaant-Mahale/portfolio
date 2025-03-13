@@ -310,8 +310,8 @@ export default function Home() {
             <div className="timeline"></div>
             <div className="w-1/2 mt-60">
               <div className="flip-box flex">
-                <div className="w-96 h-52 m-auto p-4 mr-60 text-sky-400 animated-border flex justify-center">
-                <a className="cursor-pointer hover-grow w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden m-auto ml-10 mt-6" href="https://github.com/Vedaant-Mahale"
+                <div className="w-96 h-52 m-auto hover-grow p-4 mr-60 text-sky-400 animated-border flex justify-center">
+                <a className="cursor-pointer w-30 hover-grow h-30 bg-white rounded-full flex items-center justify-center overflow-hidden m-auto ml-10 mt-6" href="https://github.com/Vedaant-Mahale"
   target="_blank"
   rel="noopener noreferrer"><Image
                     src="/github.png"
@@ -331,7 +331,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flip-box flex mt-40">
-                <div className="w-96 h-52 m-auto p-4 mr-60 text-sky-400 animated-border flex justify-center">
+                <div className="w-96 h-52 hover-grow m-auto p-4 mr-60 text-sky-400 animated-border flex justify-center">
                 <a className="cursor-pointer hover-grow w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden m-auto ml-10 mt-6" href="https://leetcode.com/u/VedaantM/"
   target="_blank"
   rel="noopener noreferrer"><Image
