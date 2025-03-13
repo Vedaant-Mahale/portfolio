@@ -252,17 +252,32 @@
 .animated-border 
 {
   --border-angle: 0deg;
-  border-radius: 12px;
+  border-radius: 9999px;
   animation: border-angle-rotate 4s infinite linear;
+  box-shadow: 0 0 20px rgb(0, 177, 255);
   border: 0.25rem solid transparent;
   background: linear-gradient(#0d0d0d, #0d0d0d) padding-box,
   conic-gradient(
-      from var(--border-angle),
-      hsl(201, 100%, 50%) 0deg 25%,
-      black 25% 50%,
-      hsl(201, 100%, 50%) 50% 75%,
-      black 75% 100% 
-    )
+    from var(--border-angle),
+    hsl(201, 100%, 50%) 0deg 20deg,
+    black 20deg 40deg,
+    hsl(201, 100%, 50%) 40deg 60deg,
+    black 60deg 80deg,
+    hsl(201, 100%, 50%) 80deg 100deg,
+    black 100deg 120deg,
+    hsl(201, 100%, 50%) 120deg 140deg,
+    black 140deg 160deg,
+    hsl(201, 100%, 50%) 160deg 180deg,
+    black 180deg 200deg,
+    hsl(201, 100%, 50%) 200deg 220deg,
+    black 220deg 240deg,
+    hsl(201, 100%, 50%) 240deg 260deg,
+    black 260deg 280deg,
+    hsl(201, 100%, 50%) 280deg 300deg,
+    black 300deg 320deg,
+    hsl(201, 100%, 50%) 320deg 340deg,
+    black 340deg 360deg
+)
   border-box;
 }
 

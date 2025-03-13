@@ -211,7 +211,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-neutral-900 dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="max-w-5xl mx-auto bg-neutral-900 dark:bg-neutral-900 h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
             >
               <button
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-transparent rounded-full flex items-center justify-center"
@@ -239,9 +239,9 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-[rgba(10,10,10,0.5)] backdrop-blur-[2px] border-4 border-sky-400 h-96 w-96 shadow-[0px_0px_20px_rgb(0,177,255)]  overflow-hidden flex flex-col items-start justify-start relative z-10 m-4"
+        className="rounded-3xl bg-[rgba(10,10,10,0.5)] backdrop-blur-[2px] border-4 border-sky-400 h-96 w-96 shadow-[0px_0px_20px_rgb(0,177,255)] cursor-pointer hover-grow overflow-hidden flex flex-col items-start justify-start relative z-10 m-4"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black via-transparent to-transparent z-30 pointer-events-none" />
+        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}

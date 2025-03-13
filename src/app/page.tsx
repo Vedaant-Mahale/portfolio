@@ -240,7 +240,7 @@ export default function Home() {
           <div className="flex justify-between h-[130vh]">
             <div className="w-1/2 mt-20">
               <div className="flip-box flex m-auto">
-                <div className="w-96 h-52 m-auto p-10 ml-60 text-sky-400 animated-border flex justify-between">
+                <div className="w-96 h-52 m-auto p-10 ml-60 text-sky-400 animated-border flex justify-between hover-grow">
                   <div>
                     <b>NAME:</b> Vedaant Mahale <br></br>
                     <b>AGE:</b> 18 <br></br>
@@ -258,7 +258,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flip-box flex mt-40">
-                <div className="w-96 h-52 m-auto p-4 ml-60 text-sky-400 animated-border flex justify-center">
+                <div className="w-96 h-52 m-auto p-4 ml-60 text-sky-400 animated-border flex justify-center hover-grow">
                 <a
   href="https://www.linkedin.com/in/vedaant-mahale-a8a517291/"
   target="_blank"
@@ -284,7 +284,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flip-box flex mt-40">
-              <div className="w-96 h-52 m-auto p-4 ml-60 text-sky-400 animated-border flex justify-center" >
+              <div className="w-96 h-52 m-auto p-4 ml-60 text-sky-400 animated-border flex justify-center hover-grow" >
                   <a className="cursor-pointer hover-grow w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden m-auto ml-10 mt-6" href="https://codeforces.com/profile/VSM_123"
   target="_blank"
   rel="noopener noreferrer"><Image
